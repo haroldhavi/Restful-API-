@@ -1,0 +1,11 @@
+<div class="row mt-5">
+  <button type="button" class="btn btn-dark mb-3" (click)="goBack()">Volver</button>
+  <div class="table-striped table-inverse table-responsive">
+    <pre>{{listPerson | json}}</pre>
+  </div>
+  <div *ngIf="listPerson.length === 0">
+    <div class="alert alert-primary" role="alert">
+      No tiene personas registradas
+    </div>
+  </div>
+</div>

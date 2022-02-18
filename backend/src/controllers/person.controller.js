@@ -18,6 +18,7 @@ exports.createPerson = async (req, res) => {
             [father]
         );
     }
+    console.log("person: ",person);
     if (person.length > 0) {
         res.status(200).send({
             message: "La persona ya existe!",
@@ -50,7 +51,6 @@ exports.getAllPerson = async (req, res) => {
     );
 
     res.status(200).send({
-        message: "All person!",
         body: {
             rows
         },
@@ -63,7 +63,6 @@ exports.getPerson = async (req, res) => {
         [idPerson]
     );
     res.status(200).send({
-        message: "One person!",
         body: {
             person: rows
         },
@@ -74,7 +73,6 @@ exports.getPersonName = async (req, res) => {
     const fullname = req.params.name;
     const person = await getPersonByFullnameService(fullname);
     res.status(200).send({
-        message: "One person!",
         body: {
             person
         },
