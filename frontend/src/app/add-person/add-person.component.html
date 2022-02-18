@@ -1,0 +1,38 @@
+<div class="row mt-5">
+  <button type="button" class="btn btn-dark mb-2" (click)="goBack()">
+    Volver
+  </button>
+  <div class="input-group mt-3 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default" placeholder="Ingrese el nombre" [(ngModel)]="data.fullname" />
+  </div>
+  <div class="input-group mt-3 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Año de nacimiento</span>
+    </div>
+    <input type="date" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default" [(ngModel)]="data.birth" />
+  </div>
+  <div class="input-group mt-3 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nombre de la Madre</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default" placeholder="Ingrese el nombre de la madre"
+      [(ngModel)]="data.mother" />
+  </div>
+  <div class="input-group mt-3 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nombre del padre</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default" placeholder="Ingrese el nombre del padre"
+      [(ngModel)]="data.father" />
+  </div>
+  <button type="button" class="btn btn-dark mb-2" (click)="addPerson()">
+    Agregar
+  </button>
+</div>

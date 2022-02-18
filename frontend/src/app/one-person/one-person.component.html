@@ -1,0 +1,19 @@
+<div class="row mt-5">
+  <button type="button" class="btn btn-dark mb-2" (click)="goBack()">
+    Volver
+  </button>
+  <div class="input-group mt-3 mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Nombre</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-default" placeholder="Ingrese el nombre de la persona a buscar"
+      [(ngModel)]="fullname" />
+  </div>
+  <button type="button" class="btn btn-dark mb-2" (click)="getOnePerson()">
+    Buscar
+  </button>
+</div>
+<div>
+  <pre>{{infoPerson | json}}</pre>
+</div>
