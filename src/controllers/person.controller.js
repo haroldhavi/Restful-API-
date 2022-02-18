@@ -37,7 +37,7 @@ exports.createPerson = async (req, res) => {
     res.status(201).send({
         message: "Person added successfully!",
         body: {
-            person: { fullname, birth, mother, father },
+            person: { fullname, birth, mother, father},
             existeMother,
             existeFather
         },
